@@ -21,6 +21,7 @@ h1 > span {
 hr {
   width: 80%;
   height: .01px;
+  border-top: 1px solid #e3e4e4;
 }
 
 main {
@@ -47,22 +48,22 @@ main {
  align-self: center;
  justify-content: center;
  align-items: center;
- width: 800px;
+ width: 650px;
+ padding: 20px 10px 10px 20px;
+ border: 1px solid #e3e4e4;
 }
 
 .accordion-content-container {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
 }
 
 .accordion-text-container {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  height: 200px;
+  padding: 0 20px;
   text-align: left;
-  margin-right: 60px;
+  font-size: .95em;
 }
 
 .accordion-text-container > h4 {
@@ -81,8 +82,8 @@ main {
 }
 
 .accordion-img {
-  width: 25%;
-  height: 25%;
+  width: 30%;
+  height: 30%;
 }
 
 .navigation {
