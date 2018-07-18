@@ -26,7 +26,7 @@ h4 {
 hr {
   width: 80%;
   height: .01px;
-  border-top: 1px solid #e3e4e4;
+  border-top: 1px solid #D1D2D3;
 }
 
 main {
@@ -56,7 +56,6 @@ main {
  justify-content: center;
  align-items: center;
  width: 800px;
- padding: 20px 10px 10px 20px;
 }
 
 .accordion-tab-container {
@@ -73,16 +72,19 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e3e4e4;
+  border: 1px solid #D1D2D3;
+  background: #F2F2F2;
+  color: #666666;
+  font-weight: 300;
 }
 
 .accordion-content-container {
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-  border-left: 1px solid #e3e4e4;
-  border-bottom: 1px solid #e3e4e4;
-  border-right: 1px solid #e3e4e4;
+  border-left: 1px solid #D1D2D3;
+  border-bottom: 1px solid #D1D2D3;
+  border-right: 1px solid #D1D2D3;padding: 20px 10px 10px 20px;
 }
 
 .accordion-text-container {
