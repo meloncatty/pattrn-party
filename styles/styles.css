@@ -51,22 +51,44 @@ main {
 
 .accordion-container {
  display: flex;
+ flex-direction: column;
  align-self: center;
  justify-content: center;
  align-items: center;
  width: 800px;
  padding: 20px 10px 10px 20px;
- border: 1px solid #e3e4e4;
+}
+
+.accordion-tab-container {
+  width: 800px;
+  height:40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.accordion-tab {
+  width: 30%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e3e4e4;
 }
 
 .accordion-content-container {
   display: flex;
   justify-content: space-around;
+  padding-top: 20px;
+  border-left: 1px solid #e3e4e4;
+  border-bottom: 1px solid #e3e4e4;
+  border-right: 1px solid #e3e4e4;
 }
 
 .accordion-text-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 0 20px;
   text-align: left;
   font-size: .95em;
@@ -83,8 +105,8 @@ main {
 }
 
 .accordion-img {
-  width: 30%;
-  height: 30%;
+  width: 28%;
+  height: 28%;
 }
 
 .navigation {
