@@ -1,0 +1,30 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2em;
+}
+
+h1 > span {
+  color: #33aeb3;
+}
+
+hr {
+  width: 80%;
+  height: .01px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
