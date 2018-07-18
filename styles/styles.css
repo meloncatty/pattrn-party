@@ -15,7 +15,7 @@ h1 {
 }
 
 h1 > span {
-  color: #33aeb3;
+  color: #34D1D1;
 }
 
 h4 {
@@ -113,10 +113,10 @@ main {
   display: flex;
   height: 20px;
   padding: 20px 60px;
-  background: #2f2335;
+  background: #2F2235;
   justify-content: space-between;
   align-items: center;
-  color: #e1e0e2;
+  color: #F2F2F2;
 }
 
 .flexible-card-container {
