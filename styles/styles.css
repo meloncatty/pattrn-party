@@ -192,3 +192,42 @@ main {
   height: 100px;
   background: #D1D2D3;
 }
+
+.header-bar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  color: #666;
+}
+
+.header-bar li {
+  padding: 0;
+  margin: 0;
+}
+
+.search-bar-container {
+  /* flex: 1 */
+  display: flex;
+}
+
+.search-bar-image {
+  width: 30px;
+}
+
+.search-bar {
+  border: 1px solid #666;
+  padding: 10px;
+}
+
+.magnifying-glass {
+  width: 20%;
+  height: 20%;
+}
+
+.search-bar span {
+  margin-right: 50px;
+}
