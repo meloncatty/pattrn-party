@@ -209,25 +209,40 @@ main {
   margin: 0;
 }
 
+.search-bar input {
+  background: #F2F2F2;
+  border-style: none;
+  border-color: none;
+  outline: none;
+  width: 100%;
+  font-size: 1em;
+  color: #666;
+}
+
 .search-bar-container {
-  /* flex: 1 */
-  display: flex;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #666;
 }
 
 .search-bar-image {
-  width: 30px;
+  height: 50px;
+  width: 50px;
+  background-image: url('../assets/img-placeholder.png');
+  background-position: center;
+  border-radius: 50%;
+  border: 1px solid #666;
 }
 
 .search-bar {
-  border: 1px solid #666;
+  display: flex;
+  align-items: center;
   padding: 10px;
+  height: 50%;
+  background: #F2F2F2;
 }
 
 .magnifying-glass {
-  width: 20%;
-  height: 20%;
-}
-
-.search-bar span {
-  margin-right: 50px;
+  margin-right: 10px;
+  height: 100%;
 }
