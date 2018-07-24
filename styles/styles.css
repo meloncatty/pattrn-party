@@ -179,3 +179,16 @@ main {
   width: 30%;
   height: 100%;
 }
+
+.header-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-bar {
+  width: 830px;
+  height: 100px;
+  background: #D1D2D3;
+}
