@@ -114,11 +114,12 @@
       </div>
       <section class='header-bar-container'>
         <nav class='header-bar'>
+          <div class='search-bar-menu'><div></div><span>MENU</span></div>
           <ul>
             <li class='search-bar-image'></li>
-            <li>Navigation Link 1</li>
-            <li>Navigation Link 2</li>
-            <li>Navigation Link 3</li>
+            <li class='nav-link'>Navigation Link 1</li>
+            <li class='nav-link'>Navigation Link 2</li>
+            <li class='nav-link'>Navigation Link 3</li>
             <li class='search-bar-container'><span class='search-bar'><img class='magnifying-glass' src='../assets/magnifying-glass.svg' /><input placeholder='Search' /></span></li>
           </ul>
         </nav>
@@ -127,10 +128,9 @@
   </body>
   <script type='text/javascript'>
     const accordionTabs = document.querySelectorAll('.accordion-tab')
-
     const textContainers = document.querySelectorAll('.accordion-text-container')
+    const headerBarMenu = document.querySelector('.search-bar-menu')
     const containerClasses = Array.from(textContainers)
-    console.log(containerClasses)
     const toggleActive = (tab) => {
       accordionTabs.forEach((item, index) => {
           const tabClasses = Array.from(item.classList)
@@ -148,5 +148,22 @@
     accordionTabs.forEach(tab => tab.addEventListener('click', () => {
       toggleActive(tab)
     }))
+
+    const toggleMenu = () => {
+      const navContent = document.querySelector('.header-bar')
+      if (navContent.children[1].style.display === 'none') {
+        navContent.children[1].style.display = 'block'
+        navContent.children[1].style.display = 'flex'
+        navContent.children[1].style.justifyContent = 'space-around'
+        navContent.children[1].style.alignItems = 'flex-start'
+        navContent.children[1].style.background = '#D1D2D3'
+        navContent.children[1].style.height = '240px'
+        window.scrollTo(0,document.body.scrollHeight)
+      } else {
+        navContent.children[1].style.display = 'none'
+      }
+    }
+
+    headerBarMenu.addEventListener('click', toggleMenu)
   </script>
 </html>
