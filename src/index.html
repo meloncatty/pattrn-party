@@ -41,6 +41,30 @@
                officia deserunt mollit anim id est laborum.
              </p>
           </div>
+          <div class='accordion-text-container hidden'>
+            <h4>Nam vel enim eget arcu tempus blandit</h4>
+            <hr class='accordion-hr'>
+            <p>Ut quam nulla, pretium vitae ipsum vel, porttitor feugiat sem. Nulla vitae rhoncus tellus. Morbi blandit urna sit amet nulla faucibus, hendrerit egestas felis ullamcorper. Vestibulum sit amet magna ut arcu pellentesque gravida. Proin felis est, sollicitudin a condimentum ut, egestas vel nisi.
+             </p>
+            <p>Ut quam nulla, pretium vitae ipsum vel, porttitor feugiat sem. Nulla vitae rhoncus tellus. Morbi blandit urna sit amet nulla faucibus, hendrerit egestas felis ullamcorper. Vestibulum sit amet magna ut arcu pellentesque gravida.
+             </p>
+          </div>
+          <div class='accordion-text-container hidden'>
+            <h4>Nunc porttitor ligula lacus</h4>
+            <hr class='accordion-hr'>
+            <p>Praesent faucibus ipsum a odio venenatis, sit amet pellentesque est venenatis. Cras tincidunt ipsum quis ipsum feugiat feugiat. Quisque consequat risus purus. Mauris laoreet sapien nisl, at venenatis tellus iaculis quis. Nulla facilisi.
+             </p>
+            <p>Maecenas vel tincidunt felis. Ut elit urna, iaculis eu sem a, malesuada luctus magna. Donec molestie suscipit felis, eget commodo magna. Ut suscipit rhoncus elementum. Maecenas ultricies massa nulla, non consequat sem laoreet et. Pellentesque in elementum lorem, pellentesque malesuada sem.
+             </p>
+          </div>
+          <div class='accordion-text-container hidden'>
+            <h4>Sed vitae rhoncus velit, et pharetra risus</h4>
+            <hr class='accordion-hr'>
+            <p> Donec faucibus dignissim cursus. Sed sit amet ipsum urna. Vestibulum vitae felis laoreet, rutrum nibh sed, ultrices magna. Proin at elit sit amet libero facilisis maximus ut sed dui. Curabitur quis egestas nisi, quis condimentum risus.
+             </p>
+            <p>Suspendisse convallis dictum ligula vel facilisis. Aliquam justo arcu, maximus quis arcu ac, placerat imperdiet ante. Integer at urna non dolor fermentum sagittis non eget magna. Proin a ex aliquet, gravida dui quis, interdum leo. Integer a ultrices metus.
+             </p>
+          </div>
         </div>
       </section>
       <div class='content-splitter'>
@@ -103,16 +127,20 @@
   <script type='text/javascript'>
     const accordionTabs = document.querySelectorAll('.accordion-tab')
 
+    const textContainers = document.querySelectorAll('.accordion-text-container')
+    const containerClasses = Array.from(textContainers)
+    console.log(containerClasses)
     const toggleActive = (tab) => {
-      accordionTabs.forEach(item => {
-       const classes = Array.from(item.classList)
-       if (classes.includes('active') && tab === item) {
-         item.className = 'accordion-tab active'
-       } else if (!classes.includes('active') && tab === item) {
-         item.className = 'accordion-tab active'
-       } else if (tab !== item) {
-         item.className = 'accordion-tab'
-       }
+      accordionTabs.forEach((item, index) => {
+          const tabClasses = Array.from(item.classList)
+          
+          if (!tabClasses.includes('active') && tab === item) {
+            containerClasses[index].classList = 'accordion-text-container'
+            item.className = 'accordion-tab active'
+          } else if (tab !== item) {
+            containerClasses[index].classList = 'accordion-text-container hidden'
+            item.className = 'accordion-tab'
+        }
       })
     }
 
