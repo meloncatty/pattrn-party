@@ -234,6 +234,10 @@ main {
   background: #D1D2D3;
 }
 
+.search-bar-menu {
+  display: none;
+}
+
 .header-bar ul {
   padding: 0;
   margin: 0;
@@ -288,11 +292,40 @@ main {
   height: 100%;
 }
 
+.button-container {
+  align-self: center;
+  margin-top: 30px;
+  width: 350px
+}
+
+.view-code {
+  height: 50px;
+  width: 300px;
+  font-weight: lighter;
+  font-size: 1.2em;
+  background: #342344;
+  color: #F2F2F2;
+}
+
+a {
+  color: #F2F2F2;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 500px) {
 
   h1 {
     margin: 0;
     padding: 0;
+  }
+
+  .view-code {
+    width: 90%;
+  }
+
+  .button-container {
+    width: 200px;
+    margin-left: 20px;
   }
 
   .content-splitter > h3 {
