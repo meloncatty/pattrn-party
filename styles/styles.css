@@ -194,12 +194,13 @@ main {
 }
 
 .card-item > h4 {
+  border-bottom: 1px solid #e1e0e2;
   padding: 15px 10px;
 }
 
 .flex-card-img {
   width: 100%;
-  height: 78.5%;
+  height: 77.5%;
 }
 
 .flexible-card-item-1, .flexible-card-item-7 {
