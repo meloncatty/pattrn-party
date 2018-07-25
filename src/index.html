@@ -20,7 +20,7 @@
       </div>
       <section class='accordion-container'>
         <div class='accordion-tab-container'>
-          <div class='accordion-tab'>Tab 1</div>
+          <div class='accordion-tab active'>Tab 1</div>
           <div class='accordion-tab'>Tab 2</div>
           <div class='accordion-tab'>Tab 3</div>
           <div class='accordion-tab'>Tab 4</div>
@@ -100,4 +100,24 @@
       </section>
     </main>
   </body>
+  <script type='text/javascript'>
+    const accordionTabs = document.querySelectorAll('.accordion-tab')
+
+    const toggleActive = (tab) => {
+      accordionTabs.forEach(item => {
+       const classes = Array.from(item.classList)
+       if (classes.includes('active') && tab === item) {
+         item.className = 'accordion-tab active'
+       } else if (!classes.includes('active') && tab === item) {
+         item.className = 'accordion-tab active'
+       } else if (tab !== item) {
+         item.className = 'accordion-tab'
+       }
+      })
+    }
+
+    accordionTabs.forEach(tab => tab.addEventListener('click', () => {
+      toggleActive(tab)
+    }))
+  </script>
 </html>
