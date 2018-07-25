@@ -11,6 +11,7 @@
   <body>
     <nav class='navigation'>
       <h1>PATTRN <span>PARTY</span></h1>
+      <hr>
       <h3>Krista Handel</h3>
     </nav>
     <main>
@@ -133,7 +134,7 @@
     const toggleActive = (tab) => {
       accordionTabs.forEach((item, index) => {
           const tabClasses = Array.from(item.classList)
-          
+
           if (!tabClasses.includes('active') && tab === item) {
             containerClasses[index].classList = 'accordion-text-container'
             item.className = 'accordion-tab active'
